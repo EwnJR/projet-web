@@ -1,0 +1,172 @@
+body {
+    background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
+    /* Dégradé allant du vert (#00ff00) vers le violet (#800080) */
+    /* Commence en haut à droite */
+    margin: 0; /* Pour enlever les marges par défaut du body */
+    height: 100vh; /* Pour que le dégradé prenne toute la hauteur de la page */
+}
+
+
+
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+
+}
+
+.bar {
+    width: 42px;
+    height: 8px;
+    background-color: #000000;
+    margin: 3px 0;
+    transition: transform 0.4s ease; /* Ajout de la transition */
+
+}
+
+.bar:hover {
+    transform: scaleY(1.5); /* Ajustez la valeur selon vos préférences */
+    background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
+}
+
+.menu-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
+    width: 200px;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-links ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease; /* Ajout de la transition de couleur de fond */
+}
+
+.menu-links ul li:hover {
+    background-color: #eaeaea; /* Changement de couleur de fond au survol */
+}
+
+.menu-links ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-links ul li:last-child {
+    border-bottom: none; /* Suppression de la bordure inférieure pour le dernier élément */
+}
+
+.show-menu {
+    display: block;
+}
+
+.zone-noir {
+    /* Styles de la zone noire */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px; /* Ajoute de l'espace autour du contenu */
+    max-width: 35%; /* Limite la largeur de la zone à 80% de la largeur de la fenêtre */
+    margin: 0 auto; /* Centre la zone horizontalement */
+    border-radius: 15px;
+    margin-top: 4rem;
+}
+
+.zone-noir h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 0; /* Ajuste la marge en haut */
+    text-align: center;
+}
+
+
+.zone-noir form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne les éléments en haut */
+    width: 100%;
+}
+
+
+
+.zone-noir label {
+    margin-right: 10px; /* Ajuste l'espace entre l'étiquette et la zone de saisie */
+}
+
+.zone-noir input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    flex: 1;
+    background-color: transparent; /* Change la couleur de fond en transparent */
+    margin-top: 5px; /* Ajuste la position verticale de la zone de saisie */
+    width: 100%;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+
+
+.erreur {
+    display: none; /* Par défaut, masque le message d'erreur */
+}
+
+.zone-noir #cdc {
+    padding: 5px 15px;
+    background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 2cm;
+    margin-top: 1cm;
+}
+
+.zone-noir #cdc:hover {
+    transition: background 0.3s ease;
+    background: #04b33e; /* Couleur de fond au survol */
+
+}
+
+
+.zone-noir #annuler {
+    padding: 5px 15px;
+    background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 9cm;
+    margin-top: 0 auto;
+
+}
+
+.zone-noir #annuler:hover {
+    transition: background 0.3s ease;
+    background: #c9302c; /* Couleur de fond au survol */
+
+}
+
+
