@@ -20,7 +20,7 @@
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="#">S'inscrire</a></li>
-            <li><a href="#">Se connecter</a></li>
+            <li><a href="connecter.html">Se connecter</a></li>
             <li><a href="#">Profil</a></li>
             <li><a href="#">Jouer</a></li>
 
@@ -29,25 +29,35 @@
         
     <div class="zone-noir">
         <h3>Inscrivez-vous.</h3>
-        <form action="/url-de-ton-traitement" method="post">
+        <form action="connecter.html" method="post">
             <label for="nom-dutilisateur">Nom d'utilisateur</label>
             <input type="text" id="nom-dutilisateur" name="nom-dutilisateur" placeholder="3 caractères minimum" pattern=".{3,}" required>
+            <img src="ressources/error.svg" alt="Mot de passe insuffisant" id="imageinsuffisant" class="validation-image" style="display: none;">
+            <img src="ressources/check.svg" alt="Mot de passe valide" id="imagevalide" class="validation-image" style="display: none;">
             
             <label for="entrez-votre-email">Entrez votre email</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre email" pattern=".{3,}" required>
+            <input type="email" id="mail" name="mail" placeholder="Votre email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required>
+
+
+
 
             <label for="mot-de-passe">Mot de passe</label>
-            <input type="text" id="mot-de-passe" name="mot-de-passe" placeholder="Votre mot de passe" pattern=".{3,}" required>
-            <span class="erreur">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum</span>
+            <input type="password" id="mot-de-passe" name="mot-de-passe" placeholder="Votre mot de passe"  required>
+            <img src="ressources/error.svg" alt="Mot de passe insuffisant" id="imageinsuffisant" class="validation-image" style="display: none;">
+            <img src="ressources/check.svg" alt="Mot de passe valide" id="imagevalide" class="validation-image" style="display: none;">
+            <p>Le mot de passe doit contenir au moins 8 caractères et inclure au moins un chiffre et un caractère spécial.</p>           
+            <p id="force-mot-de-passe"></p>
+           
+
 
 
             <label for="confirmer-le-mdp">Confirmer le mot de passe</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Confirmer votre mot de passe" pattern=".{3,}" required>
-
-            <span class="erreur">Le prénom doit contenir au moins 3 caractères</span>
+            <input type="password" id="mdp" name="mdp" placeholder="Confirmer votre mot de passe"  required>
+            <img src="error.svg" alt="Mot de passe insuffisant" id="image-insuffisant" style="display: none;">
+            <img src="check.svg" alt="Mot de passe valide" id="image-valide" style="display: none;">
     
             <button type="submit" id="cdc">Création du compte</button>
-            <button type="submit" id="annuler">Annuler</button>
+            <button type="reset" id="annuler">Annuler</button>
 
         </form>
     </div>

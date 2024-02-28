@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+</head>
+<body>
+    <h1 id="welcome-message"></h1>
+
+    <script>
+        // Récupérer les informations du compte depuis le localStorage
+        var storedAccountInfo = JSON.parse(localStorage.getItem("accountInfo"));
+
+        // Afficher un message de bienvenue avec le nom d'utilisateur
+        document.getElementById("welcome-message").innerText = "Bienvenue, " + storedAccountInfo.username + "!";
+    </script>
+</body>
+</html>

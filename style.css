@@ -1,17 +1,12 @@
 body {
     background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
-    /* Dégradé allant du vert (#00ff00) vers le violet (#800080) */
-    /* Commence en haut à droite */
-    margin: 0; /* Pour enlever les marges par défaut du body */
-    height: 100vh; /* Pour que le dégradé prenne toute la hauteur de la page */
+    margin: 0;
+    height: 100vh;
 }
 
-
-
-
-h1{
+h1 {
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .menu-btn {
@@ -22,7 +17,6 @@ h1{
     top: 20px;
     right: 20px;
     z-index: 9999;
-
 }
 
 .bar {
@@ -30,12 +24,11 @@ h1{
     height: 8px;
     background-color: #000000;
     margin: 3px 0;
-    transition: transform 0.4s ease; /* Ajout de la transition */
-
+    transition: transform 0.4s ease;
 }
 
 .bar:hover {
-    transform: scaleY(1.5); /* Ajustez la valeur selon vos préférences */
+    transform: scaleY(1.5);
     background: linear-gradient(to bottom right, rgb(166, 253, 166), #800080);
 }
 
@@ -60,11 +53,11 @@ h1{
 .menu-links ul li {
     padding: 10px 20px;
     border-bottom: 1px solid #ccc;
-    transition: background-color 0.3s ease; /* Ajout de la transition de couleur de fond */
+    transition: background-color 0.3s ease;
 }
 
 .menu-links ul li:hover {
-    background-color: #eaeaea; /* Changement de couleur de fond au survol */
+    background-color: #eaeaea;
 }
 
 .menu-links ul li a {
@@ -73,7 +66,7 @@ h1{
 }
 
 .menu-links ul li:last-child {
-    border-bottom: none; /* Suppression de la bordure inférieure pour le dernier élément */
+    border-bottom: none;
 }
 
 .show-menu {
@@ -83,9 +76,9 @@ h1{
 .zone-noir {
     background-color: black;
     color: white;
-    padding: 10px; /* Ajoute de l'espace autour du contenu */
-    max-width: 50%; /* Limite la largeur de la zone à 80% de la largeur de la fenêtre */
-    margin: 0 auto; /* Centre la zone horizontalement */
+    padding: 10px;
+    max-width: 50%;
+    margin: 0 auto;
     border-radius: 15px;
     margin-top: 4rem;
 }
@@ -104,5 +97,4 @@ h1{
     display: block;
     margin: 0 auto;
     margin-bottom: 0.8rem;
-
 }
