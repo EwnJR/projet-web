@@ -148,7 +148,7 @@ h1 {
 }
 
 .validation-image {
-    width: 20px; /* Définissez la largeur souhaitée */
+    width: 20px; 
     height: 20px; /* Définissez la hauteur souhaitée */
     margin-left: 520px; /* Marge à gauche pour séparer l'image du champ de saisie */
     margin-top: -21px;
@@ -188,4 +188,20 @@ h1 {
     text-decoration: none;
     cursor: pointer;
   }
+
+  
+  .img-question {
+    height: 60px;
+    width: 60px;
+    margin-left: 6.40cm;
+    border-radius: 50%; /* Assurez-vous que le rayon du cercle est la moitié de la largeur/hauteur */
+    overflow: hidden; /* Cache les parties de l'image en dehors du cercle */
+    border: 1px solid white; /* Couleur blanche pour la bordure */
+    margin-top: -0.5cm;
+}
+
+
+
+
+
   
