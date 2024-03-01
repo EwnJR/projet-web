@@ -1,13 +1,15 @@
 const menuBtn = document.querySelector('.menu-btn');
 const menuLinks = document.querySelector('.menu-links');
-let boutonAnnuler; 
+let boutonAnnuler;
 
 menuBtn.addEventListener('click', () => {
     menuLinks.classList.toggle('show-menu');
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    boutonAnnuler = document.getElementById('annuler'); 
+    boutonAnnuler = document.getElementById('annuler');
 
     if (boutonAnnuler) {
         boutonAnnuler.addEventListener('click', function() {
@@ -23,7 +25,7 @@ if (boutonAnnuler) {
         const champsTexte = document.querySelectorAll('.zone-noir input[type="text"]');
         const champsEmail = document.querySelectorAll('.zone-noir input[type="email"]');
         const champsMotDePasse = document.querySelectorAll('.zone-noir input[type="password"]');
-        
+
         champsTexte.forEach(champ => {
             champ.value = '';
         });
@@ -39,37 +41,37 @@ if (boutonAnnuler) {
 const motDePasse = document.getElementById('mot-de-passe');
 const confirmerMotDePasse = document.getElementById('mdp');
 const forceMotDePasse = document.getElementById('force-mot-de-passe');
-const imageinsuffisant = document.getElementById('imageinsuffisant');
-const imagevalide = document.getElementById('imagevalide');
+// const imageinsuffisant = document.getElementById('imageinsuffisant');
+// const imagevalide = document.getElementById('imagevalide');
 
 function validerMotDePasse() {
     const motDePasseValue = motDePasse.value;
     const confirmerMotDePasseValue = confirmerMotDePasse.value;
-    
+
     const regex = /^(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:',.<>?/\\]).{8,}$/;
-    
+
     if (!regex.test(motDePasseValue)) {
         motDePasse.setCustomValidity("Le mot de passe doit contenir au moins 8 caractères et inclure au moins un chiffre et un caractère spécial.");
         forceMotDePasse.textContent = 'Faible';
-        forceMotDePasse.style.color = 'red'; 
+        forceMotDePasse.style.color = 'red';
         imageinsuffisant.style.display = 'inline-block';
         imagevalide.style.display = 'none';
     } else {
         motDePasse.setCustomValidity("");
         if (motDePasseValue.length < 5) {
-            forceMotDePasse.textContent = 'Faible'; 
+            forceMotDePasse.textContent = 'Faible';
             forceMotDePasse.style.color = 'red';
         } else if (motDePasseValue.length >= 5 && motDePasseValue.length < 8) {
             forceMotDePasse.textContent = 'Moyen';
-            forceMotDePasse.style.color = 'orange'; 
+            forceMotDePasse.style.color = 'orange';
         } else {
             forceMotDePasse.textContent = 'Fort';
-            forceMotDePasse.style.color = 'green'; 
+            forceMotDePasse.style.color = 'green';
             imageinsuffisant.style.display = 'none';
             imagevalide.style.display = 'inline-block';
         }
     }
-    
+
     if (motDePasseValue !== confirmerMotDePasseValue) {
         confirmerMotDePasse.setCustomValidity("Les mots de passe ne correspondent pas.");
     } else {
@@ -90,7 +92,6 @@ function enregistrerDonneesInscription(nomUtilisateur, emailUtilisateur) {
 
     localStorage.setItem('donneesInscription', donneesJSON);
 
-    
     console.log('Données d\'inscription enregistrées :', donneesInscription);
 }
 
@@ -100,8 +101,15 @@ const emailUtilisateur = document.getElementById('mail').value;
 enregistrerDonneesInscription(nomUtilisateur, emailUtilisateur);
 console.log('Données d\'inscription enregistrées :', donneesInscription);
 
+
+
+
+
+
+
 const langageListe = document.getElementById('langage');
 const imageContainer = document.getElementById('imageContainer');
+
 
 langageListe.addEventListener('change', function() {
 
